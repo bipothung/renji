@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Amita:wght@700&display=swap");
+
+/* Tailwind Config Adjustment */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Hide the scrollbars */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Amita", cursive;
+  background: linear-gradient(to top right, #403d3d 20vh, #0d0d0d 100vh);
+  min-height: 100vh; /* Ensure the body covers at least the full viewport height */
+  display: flex; /* Optional: Center content vertically if needed */
+  flex-direction: column; /* Optional: Stack content vertically */
+}
+/* Optionally, hide scrollbar in Webkit browsers */
+::-webkit-scrollbar {
+  display: none;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.testimonial-list {
+  display: flex;
+  animation: scroll 90s linear infinite;
+}
+
+.testimonial-container {
+  display: flex;
+  overflow: hidden;
+} /* styles/globals.css or styles/audioPlayer.css */
